@@ -55,11 +55,12 @@ body{background:#0a0a0f;color:#f0e6e0;font-family:Georgia,'Palatino Linotype',Pa
 .envelope-body::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:12px;height:12px;background:#8b6914;border-radius:50%;opacity:0.5}
 .envelope-card{position:absolute;top:10%;left:5%;width:90%;height:85%;border-radius:6px;overflow:hidden;transform:translateY(0);transition:transform 0.8s 0.3s cubic-bezier(0.4,0,0.2,1);z-index:2}
 .envelope-card img,.envelope-card video{width:100%;height:100%;object-fit:cover}
-.envelope-wrap.open .envelope-flap{transform:rotateX(180deg)}
-.envelope-wrap.open .envelope-card{transform:translateY(-50%)}
+.envelope-wrap.open .envelope-flap{transform:rotateX(180deg);z-index:1}
+.envelope-wrap.open .envelope-card{transform:translateY(-70%);z-index:10}
+.envelope-wrap.open .envelope-body{z-index:2}
 .envelope-seal{position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);width:36px;height:36px;background:radial-gradient(circle,#8b1a1a,#5a0f0f);border-radius:50%;z-index:5;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.3);transition:opacity 0.4s}
 .envelope-seal::after{content:'M';color:#c9a96e;font-size:14px;font-weight:bold}
-.envelope-wrap.open .envelope-seal{opacity:0}
+.envelope-wrap.open .envelope-seal{opacity:0;z-index:1}
 
 /* GIFT BOXES */
 .gift-wrap{perspective:600px;width:100%;max-width:280px;cursor:pointer}
@@ -742,4 +743,3 @@ document.addEventListener('click',function(){
 </script>
 </body>
 </html>
-force purge
