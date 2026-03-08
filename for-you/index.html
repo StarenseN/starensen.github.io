@@ -54,7 +54,7 @@ body{background:#0a0a0f;color:#f0e6e0;font-family:Georgia,'Palatino Linotype',Pa
 .envelope-body{position:absolute;bottom:0;left:0;width:100%;height:65%;background:linear-gradient(135deg,#b8954e,#a8854a);border-radius:0 0 8px 8px;z-index:4;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .envelope-body::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:12px;height:12px;background:#8b6914;border-radius:50%;opacity:0.5}
 .envelope-card{position:absolute;top:10%;left:5%;width:90%;height:85%;border-radius:6px;overflow:hidden;transform:translateY(0);transition:transform 0.8s 0.3s cubic-bezier(0.4,0,0.2,1);z-index:2}
-.envelope-card img,.envelope-card video{width:100%;height:100%;object-fit:cover}
+.envelope-card img,.envelope-card video{width:100%;height:100%;object-fit:cover;object-position:center top}
 .envelope-wrap.open .envelope-flap{transform:rotateX(180deg);z-index:1}
 .envelope-wrap.open .envelope-card{transform:translateY(-70%);z-index:10}
 .envelope-wrap.open .envelope-body{z-index:2}
