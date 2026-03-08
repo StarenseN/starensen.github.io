@@ -130,10 +130,10 @@ body{background:#0a0a0f;color:#f0e6e0;font-family:Georgia,'Palatino Linotype',Pa
 .heart::after{left:0;transform:rotate(45deg);transform-origin:100% 100%}
 @keyframes heartBeat{0%,100%{transform:scale(1)}15%{transform:scale(1.15)}30%{transform:scale(1)}45%{transform:scale(1.1)}}
 
-/* FLOATING HEARTS */
+/* FLOATING FLOWERS */
 .floating-hearts{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden}
-.float-heart{position:absolute;bottom:-30px;color:#b8848c;font-size:1.2rem;opacity:0;animation:floatUp linear infinite}
-@keyframes floatUp{0%{transform:translateY(0) rotate(0deg);opacity:0}10%{opacity:0.6}90%{opacity:0.3}100%{transform:translateY(-100vh) rotate(360deg);opacity:0}}
+.float-heart{position:absolute;bottom:-30px;font-size:1.2rem;opacity:0;animation:floatUp linear infinite}
+@keyframes floatUp{0%{transform:translateY(0) rotate(0deg);opacity:0}10%{opacity:0.7}90%{opacity:0.3}100%{transform:translateY(-100vh) rotate(360deg);opacity:0}}
 
 /* VIDEO CONTROLS */
 .video-overlay{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.2);z-index:5;cursor:pointer;transition:opacity 0.3s}
@@ -251,7 +251,7 @@ img,video{display:block}
 <div class="scene-divider"></div>
 <div class="scene-texts" data-anim>
 <span class="ru">&#1057; &#1087;&#1088;&#1072;&#1079;&#1076;&#1085;&#1080;&#1082;&#1086;&#1084; 8 &#1052;&#1072;&#1088;&#1090;&#1072;</span>
-<span class="fr" style="display:block;max-width:500px;margin:0.8rem auto 0;line-height:1.7">Across the world, this day means different things. In Russia, it's when the people you love remind you just how much you matter. So here I am, reminding you.</span>
+<span class="fr" style="display:block;max-width:500px;margin:0.8rem auto 0;line-height:1.7">Today is your day. The day I get to tell you how much you matter to me.</span>
 </div>
 <div class="finale-video-wrap">
 <video preload="none" playsinline loop>
@@ -681,7 +681,7 @@ function toggleFinaleVideo(overlay){
 /* ============= FLOATING HEARTS (OUTRO) ============= */
 (function(){
   var container = document.getElementById('floatingHearts');
-  var hearts = ['\u2665','\u2764','\u2661'];
+  var hearts = ['\uD83C\uDF38','\uD83C\uDF3A','\uD83C\uDF3B','\uD83C\uDF37','\uD83C\uDF3C'];
   for(var i=0;i<20;i++){
     var h = document.createElement('span');
     h.className = 'float-heart';
